@@ -1,0 +1,134 @@
+*,
+::after,
+::before {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #eec612;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    
+    a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+        transition: .5s;
+    }
+
+    li {
+        float: left;
+        padding: 10px;
+        background: #eec612;
+        color: white;
+        position: relative;
+        list-style-type: none;
+    }
+
+    li a {
+        font-size: 15px;
+    }
+
+    img {
+        width: 50px;
+        margin-left: 10px;
+    }
+
+    li:hover {
+        background-color: black;
+    }
+
+    .heading {
+        font-size: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+    #bar {
+        -webkit-appearance: none;
+    }
+
+    .trigger {
+        display: none;
+    }
+
+    @media (max-width: 720px) {
+
+        .main-menu{
+            display:none;
+            position: absolute;
+            top: 50px;
+            width: 100%;
+            right: 0;
+            opacity: 1;
+            animation: anim .5s reverse;
+        }
+
+        @keyframes anim {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .main-menu > li {
+            float: none;
+        }
+
+        .trigger{
+            display: block;
+        }
+
+        .trigger, i {
+            font-size: 30px;
+            color: white;
+            padding: 10px;
+        }
+
+        #bar:checked ~ .main-menu {
+            display: block;
+            opacity: 0;
+            animation: anim .5s forwards;
+        }
+
+        #bar:checked ~ .trigger {
+            background-color: black;
+        }
+
+    }
+}
+
+use:hover {
+    fill: #E55D76;
+    cursor: pointer;
+}
+
+/* login */
+.hero__container{
+    display: flex;
+
+    .map__container{
+        max-inline-size: 70%;
+        border: 1px solid red;
+    }
+    
+    .login__container{
+        display: flex;
+        flex-direction: column;
+        background-image: "";
+    
+        .cta{
+            display: inline-block;
+        }
+    }
+}
