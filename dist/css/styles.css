@@ -215,4 +215,81 @@ use:hover {
   background-size: cover;
 }
 
+.cardd .containers {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-left: 150px;
+}
+.cardd .card-container {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 12px;
+  perspective: 900px;
+  text-align: center;
+}
+.cardd .card {
+  position: relative;
+  width: 300px;
+  height: 260px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+.cardd .front, .cardd .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+.cardd .front {
+  background: #FEC606;
+  font-size: 12px;
+}
+.cardd .front .card-img {
+  background: black;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+.cardd .front .card-img img {
+  width: 100%;
+  height: 100%;
+}
+.cardd .front .card-body {
+  width: 100%;
+  height: 150px;
+}
+.cardd .front .card-body h3 {
+  font-size: 15px;
+}
+.cardd .front .card-footer {
+  font-size: 16px;
+}
+.cardd .back {
+  background: tomato;
+  font-size: 14px;
+}
+.cardd .back p {
+  padding: 1em;
+  font-weight: 100;
+}
+.cardd .back p span {
+  font-weight: bold;
+}
+.cardd .back ul li {
+  text-align: left;
+}
+.cardd .card-container:hover .card {
+  transform: rotateY(180deg);
+}
+.cardd .back {
+  transform: rotateY(180deg);
+}
+
 /*# sourceMappingURL=styles.css.map */
