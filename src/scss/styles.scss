@@ -1,7 +1,9 @@
-@import 'colors';
-@import 'noticias';
-@import 'mixin';
 @import 'variables';
+@import 'news';
+@import 'colors';
+@import 'mixin';
+@import 'noticias';
+
 
 
 *,
@@ -137,4 +139,64 @@ use:hover {
             display: inline-block;
         }
     }
+}
+
+//quienessomos
+.parallax{
+    font-family: Open Sans;
+  font-size: 18px;
+  line-height: 28px;
+  scroll-behavior: smooth;
+  h1 {
+    letter-spacing: -15px;
+    font-family: Open Sans;
+    color: rgb(240, 239, 188);
+    text-align: center;
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 200px;
+    text-shadow: 4px 4px black;
+  }
+  
+  .MainContainer {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  .ContentContainer {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .Content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+  
+  p {
+    margin: 75px 0;
+  }
+  
+  .ParallaxContainer {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-1px) scale(2);
+    background: url(https://wallpaperaccess.com/full/3433141.jpg);
+    background-size: cover;
+    
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+  
 }
