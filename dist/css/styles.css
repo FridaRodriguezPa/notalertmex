@@ -1,12 +1,24 @@
 /* Principal Color */
-header .hero__news {
+header.hero {
+  background-image: url(/img/ss.jpg);
+}
+
+.hero__news {
   position: relative;
   width: min(100%, 1400px);
   min-height: 30vh;
   margin: 0 auto;
-  background-color: #F5EB3D;
 }
-header .hero__news .hero__title--bg {
+.hero__news .hero__img {
+  margin: 0 auto;
+  padding-top: calc(15vh - 65px);
+  padding-left: 10px;
+  width: 130px;
+}
+.hero__news .hero__img img {
+  width: 100%;
+}
+.hero__news .hero__title--bg {
   position: absolute;
   width: 17rem;
   padding: 20px;
@@ -17,9 +29,9 @@ header .hero__news .hero__title--bg {
   border-radius: 30px;
   color: black;
   background-color: #FFCC14;
-  filter: opacity(0.6);
+  filter: opacity(0.65);
 }
-header .hero__news .hero__title--bg p {
+.hero__news .hero__title--bg p {
   filter: opacity(1);
 }
 
