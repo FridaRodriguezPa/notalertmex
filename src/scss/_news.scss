@@ -1,3 +1,15 @@
+@import 'colors';
+
 .hero__news{
   height: 30vh;
+  background-color: $color-yellow-mustard;
+
+  .news__img{
+    width: 100px;
+
+    img{
+      max-inline-size: 100%;
+    }
+  }
+
 }

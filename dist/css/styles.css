@@ -1,5 +1,13 @@
+/* Principal Color */
 .hero__news {
   height: 30vh;
+  background-color: #FFCC14;
+}
+.hero__news .news__img {
+  width: 100px;
+}
+.hero__news .news__img img {
+  max-inline-size: 100%;
 }
 
 /* Principal Color */
