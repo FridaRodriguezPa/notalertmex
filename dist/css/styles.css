@@ -1,6 +1,8 @@
 /* Principal Color */
-header.hero {
+.hero__img {
   background-image: url(/img/ss.jpg);
+  background-size: cover;
+  width: 100%;
 }
 
 .hero__news {
@@ -37,7 +39,7 @@ header.hero {
 
 .news__container {
   margin: 45px auto;
-  width: 95%;
+  width: min(90%, 900px);
 }
 .news__container .new__container {
   display: flex;
@@ -52,7 +54,7 @@ header.hero {
   color: cornflowerblue;
 }
 .news__container .new__container .new__text p {
-  padding: 10px 0 5px 5px;
+  padding: 10px 0 10px 5px;
   color: white;
 }
 .news__container .new__container .new__picture img {
