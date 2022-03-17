@@ -4,36 +4,83 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Noticias</title>
+  <script src="https://kit.fontawesome.com/79de04ec23.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="dist/css/styles.css">
 </head>
 <body>
-
   <header>
-    <section class="hero__news">
-      <div class="news__img">
-        <img src="img/search.png" alt="">
-      </div>
-      <h1 class="hero__title">Noticias</h1>
-    </section> 
-  </header>
-  <main>
+    <!-- navbar -->
+    <section class="container">
+      <h1 class="heading">
+          <img src="./img/search.png" alt="logo">
+          <a href="#">AlertMex</a>
+      </h1>
+      <input type="checkbox" name="bar" id="bar">
+      <label for="bar" class="trigger"><i class="fa fa-bars"></i></label>
+      <menu class="main-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Feature</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About Us</a></li>
+      </menu>
+  </section>
 
-    <section class="news__container">
-      <!-- news -->
-      <article class="new">
-        <span></span>
-        <div class="new__text">
-          <h3>Título de la noticia</h3>
-          <p>Descripción de la noticia</p>
-        </div>
-        <img src="" alt="imagen de la noticia">
+    <div class="hero__img">
+      <section class="hero__news">
+        <article class="hero__img">
+          <img src="img/alertmexlogo.png" alt="">
+        </article>
+        <article class="hero__title--bg">
+          <p>Noticias</p>
+        </article>
+      </section>
+    </div>
+  </header>
+
+  <main class="news__container">
+
+    <!-- new card -->
+    <section class="new__container">
+      <article class="new__text">
+          <h3 id="new__title">Titulo de la noticia</h3>
+        <p id="new__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab saepe atque tempora inventore repellendus in iste quo unde eveniet aliquam.
+          </p>
+      </article>
+      <article class="new__picture">
+        <img id="new__img" src="img/ss.jpg" alt="imagen de la noticia">
       </article>
     </section>
+    <!-- new card -->
+    <section class="new__container">
+      <article class="new__text">
+        <h3 id="new__title">Titulo de la noticia</h3>
+        <p id="new__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab saepe atque tempora inventore repellendus in iste quo unde eveniet aliquam.
+          </p>
+      </article>
+      <article class="new__picture">
+        <img id="new__img" src="img/ss.jpg" alt="imagen de la noticia">
+      </article>
+    </section>
+    <!-- new card -->
+    <section class="new__container">
+      <article class="new__text">
+        <h3 id="new__title">Titulo de la noticia</h3>
+        <p id="new__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab saepe atque tempora inventore repellendus in iste quo unde eveniet aliquam.
+          </p>
+      </article>
+      <article class="new__picture">
+        <img id="new__img" src="img/ss.jpg" alt="imagen de la noticia">
+      </article>
+    </section>
+
+
   </main>
+  
   <footer></footer>
 
 
-  </section>                 
+  </section>
 </body>
 </html>
