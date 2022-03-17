@@ -1,10 +1,9 @@
 
-.hero__img{
+.hero{
   background-image: url(/img/ss.jpg);
+  max-inline-size: 100%;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center up;
-  width: 100%;
+
 }
 .hero__news{
   position: relative;
@@ -12,7 +11,7 @@
   min-height: 30vh;
   margin: 0 auto;
 
-  .hero__img{
+  .hero__logo{
     margin: 0 auto;
     padding-top: calc(15vh - 65px);
     padding-left: 10px;
@@ -55,20 +54,21 @@
 
     .new__text{
       h3{
-        padding: 10px 0 10px 5px;
+        padding: 10px 0 10px 10px;
         font-weight: normal;
         color: cornflowerblue;
       }
       p{
-        padding: 10px 0 10px 5px;
+        padding: 10px 0 10px 10px;
         color: white;
+        width: 100%;
       }
     }
 
     .new__picture{
       img{
         max-inline-size: 100px;
-        padding-right: 8px;
+        padding-right: 10px;
         border-radius: 10px;
       }
     }

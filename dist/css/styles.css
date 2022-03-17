@@ -1,10 +1,8 @@
 /* Principal Color */
-.hero__img {
+.hero {
   background-image: url(/img/ss.jpg);
+  max-inline-size: 100%;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center up;
-  width: 100%;
 }
 
 .hero__news {
@@ -13,13 +11,13 @@
   min-height: 30vh;
   margin: 0 auto;
 }
-.hero__news .hero__img {
+.hero__news .hero__logo {
   margin: 0 auto;
   padding-top: calc(15vh - 65px);
   padding-left: 10px;
   width: 130px;
 }
-.hero__news .hero__img img {
+.hero__news .hero__logo img {
   width: 100%;
 }
 .hero__news .hero__title--bg {
@@ -51,17 +49,18 @@
   background-color: #1b1616;
 }
 .news__container .new__container .new__text h3 {
-  padding: 10px 0 10px 5px;
+  padding: 10px 0 10px 10px;
   font-weight: normal;
   color: cornflowerblue;
 }
 .news__container .new__container .new__text p {
-  padding: 10px 0 10px 5px;
+  padding: 10px 0 10px 10px;
   color: white;
+  width: 100%;
 }
 .news__container .new__container .new__picture img {
   max-inline-size: 100px;
-  padding-right: 8px;
+  padding-right: 10px;
   border-radius: 10px;
 }
 
