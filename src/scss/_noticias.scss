@@ -2,6 +2,8 @@
 .hero__img{
   background-image: url(/img/ss.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center up;
   width: 100%;
 }
 .hero__news{
