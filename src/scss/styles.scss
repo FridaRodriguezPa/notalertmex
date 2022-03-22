@@ -200,82 +200,92 @@ use:hover {
   
 }
 
-.cardd{
-    .containers{  
-        width: 80%;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin-left: 150px;
-      }
-      .card-container {
-        display: inline-block;
-        margin: 0 auto;
-        padding: 0 12px;
-        perspective: 900px;
-        text-align: center;
-      }
-      .card {  
-        position: relative;
-        width: 300px;
-        height: 260px;
-        transition: all 0.6s ease;
-        transform-style: preserve-3d;
-      }
-      .front, .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      color: white;
-      box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-      backface-visibility: hidden;
-      }
-      .front {
-        background: #FEC606;
-        font-size: 12px;
-        .card-img{
-          background: black;
-          width: 100%;
-          height: 210px;
-          overflow:hidden;
-          & img{
-            width: 100%;
-            height: 100%;      
-          }
-        }
-        .card-body{
-          width: 100%;
-          height: 150px;    
-          h3{
-           font-size: 15px; 
-          }
-        }
-        .card-footer{
-          font-size: 16px;
-        }
-      }
-      .back {  
-        background: tomato;
-        font-size: 14px;  
-        p{
-          padding: 1em;
-          font-weight: 100;
-          span{
-            font-weight: bold;
-          }
-        }  
-        ul li{
-            text-align: left;
-        }
-        
-      }
-      .card-container:hover .card {
-      transform: rotateY(180deg);
-      }
-      .back {
-      transform: rotateY(180deg);
-      }
+
+.containers {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
+  height: 99.9vh;
+  max-height: 640px;
+}
+@media screen and (min-width: 640px) {
+  .containers {
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 639px) and (orientation: portrait) {
+  .containers {
+    padding-top: 5rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .containers {
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+.flipcard {
+  margin: 10px auto;
+  position: relative;
+}
+@media screen and (min-width: 640px) {
+  .flipcard {
+    margin: 0 10px;
+  }
+}
+
+.flip_front {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+.flip_back {
+  background-color: rgba(255,255,255,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+@media screen and (min-width: 640) {
+  .flip_back {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.flip, .flipcard,
+.flipcard .flip_front,
+.flipcard .flip_back {
+  max-height: 200px;
+  max-width: 200px;
+  transition: opacity 1s ease-in-out;
+}
+.flipcard:hover .flip_front {
+  opacity: 0.2;
+}
+.flipcard:hover .flip_back {
+  opacity: 1;
+}
+
+@media screen and (min-width: 920px) {
+  .flip, .flipcard,
+  .flipcard .flip_front,
+  .flipcard .flip_back {
+    max-height: 300px;
+    max-width: 300px;
+  }
 }
