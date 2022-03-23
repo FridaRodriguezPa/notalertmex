@@ -17,6 +17,10 @@
     padding-left: 10px;
     width: 130px;
 
+    @include lg{
+      width: 220px;
+    }
+
     img {
       width: 100%;
     }
@@ -35,6 +39,12 @@
     background-color: $color-yellow-mustard;
     filter: opacity(0.65);
 
+    @include lg{
+      width: 60vw;
+      left: calc(50% - 30vw);
+      font-size: 2rem;
+    }
+
     p {
       filter: opacity(1);
     }
@@ -48,6 +58,7 @@
   
   @include lg{
     margin: 0 auto;
+    margin-top: 50px;
   }
   
   .news__container {
