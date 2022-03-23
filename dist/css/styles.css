@@ -8,7 +8,7 @@
 .hero {
   background-image: url(/img/ss.jpg);
   max-inline-size: 100%;
-  background-size: cover;
+  background-size: contain;
 }
 
 .hero__news {
@@ -43,40 +43,75 @@
   filter: opacity(1);
 }
 
-.news__container {
-  margin: 45px auto;
-  width: min(90%, 900px);
+.general__container {
+  display: flex;
+  width: min(100%, 1250px);
 }
-.news__container .new__container {
+@media only screen and (min-width: 1250px) {
+  .general__container {
+    margin: 0 auto;
+  }
+}
+.general__container .news__container {
+  margin: 45px auto;
+  width: min(90% - 2rem, 900px);
+}
+.general__container .news__container .new__container {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   border-radius: 15px;
   background-color: #1b1616;
 }
-.news__container .new__container .new__text h3 {
+.general__container .news__container .new__container .new__text h3 {
   padding: 10px 0 10px 10px;
   font-weight: normal;
   color: cornflowerblue;
 }
-.news__container .new__container .new__text p {
+@media only screen and (min-width: 1250px) {
+  .general__container .news__container .new__container .new__text h3 {
+    font-size: 25px;
+  }
+}
+.general__container .news__container .new__container .new__text p {
   padding: 10px 0 10px 10px;
   color: white;
   width: 100%;
 }
-.news__container .new__container .new__picture img {
+@media only screen and (min-width: 1250px) {
+  .general__container .news__container .new__container .new__text p {
+    font-size: 20px;
+  }
+}
+.general__container .news__container .new__container .new__picture img {
   max-inline-size: 100px;
   padding-right: 10px;
   border-radius: 10px;
 }
-.news__container .banner__container {
-  display: flex;
-  flex-direction: column;
+@media only screen and (min-width: 1250px) {
+  .general__container .news__container .new__container .new__picture img {
+    padding-right: 10px;
+    border-radius: 10px;
+  }
 }
-.news__container .banner__container .banner {
-  width: 300px;
+.general__container .banner__container {
+  visibility: hidden;
+  display: none;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
-.news__container .banner__container .banner img {
+@media only screen and (min-width: 1250px) {
+  .general__container .banner__container {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.general__container .banner__container .banner {
+  width: 350px;
+  margin-bottom: 1rem;
+}
+.general__container .banner__container .banner img {
   width: 100%;
 }
 
