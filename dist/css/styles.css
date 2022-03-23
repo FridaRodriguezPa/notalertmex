@@ -7,8 +7,9 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 .hero {
   background-image: url(/img/ss.jpg);
-  max-inline-size: 100%;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero__news {
@@ -96,6 +97,9 @@
     font-size: 20px;
   }
 }
+.general__container .news__container .new__container .new__text .news__loader {
+  justify-self: center;
+}
 .general__container .news__container .new__container .new__picture img {
   max-inline-size: 100px;
   padding-right: 10px;
@@ -126,6 +130,20 @@
 }
 .general__container .banner__container .banner img {
   width: 100%;
+}
+.general__container .news__loader {
+  display: flex;
+  justify-content: center;
+}
+.general__container .news__loader .news__cta {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #FF883B;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.general__container .news__loader .news__cta:hover {
+  color: whitesmoke;
 }
 
 *,

@@ -1,7 +1,8 @@
 .hero {
   background-image: url(/img/ss.jpg);
-  max-inline-size: 100%;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
 
@@ -92,6 +93,9 @@
           font-size: 20px;
         }
       }
+      .news__loader{
+        justify-self: center;
+      }
     }
 
     .new__picture {
@@ -127,6 +131,23 @@
       
       img{
         width: 100%;
+      }
+    }
+  }
+
+  .news__loader{
+    display: flex;
+    justify-content: center;
+    
+    .news__cta{
+      font-size: 20px;
+      cursor: pointer;
+      background-color: $color-peach;
+      padding: 10px 15px;
+      border-radius: 5px;
+      
+      &:hover{
+        color: $color-whitesmoke;
       }
     }
   }
