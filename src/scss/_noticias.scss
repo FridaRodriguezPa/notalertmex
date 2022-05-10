@@ -1,3 +1,4 @@
+
 .hero {
   background-image: url(/img/ss.jpg);
   background-size: cover;
@@ -100,9 +101,10 @@
 
     .new__picture {
       img {
-        max-inline-size: 100px;
+        max-inline-size: 200px;
         padding-right: 10px;
         border-radius: 10px;
+        padding: 10px;
         
         @include lg{
           padding-right: 10px;

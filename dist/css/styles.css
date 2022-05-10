@@ -101,9 +101,10 @@
   justify-self: center;
 }
 .general__container .news__container .new__container .new__picture img {
-  max-inline-size: 100px;
+  max-inline-size: 200px;
   padding-right: 10px;
   border-radius: 10px;
+  padding: 10px;
 }
 @media only screen and (min-width: 1250px) {
   .general__container .news__container .new__container .new__picture img {
