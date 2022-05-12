@@ -34,9 +34,9 @@
 }
 .hero__news .hero__title--bg {
   position: absolute;
-  width: 17rem;
+  width: 20rem;
   padding: 20px;
-  left: calc(50% - 8.5rem);
+  left: calc(50% - 10rem);
   top: calc(30vh - 25px);
   font-weight: bolder;
   text-align: center;
@@ -260,15 +260,47 @@ body {
   word-spacing: 100vw;
 }
 
+::placeholder {
+  color: black;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+::-moz-placeholder {
+  color: black;
+}
+
+#registro__title--btn {
+  padding: 15px;
+  border-radius: 10px;
+}
+#registro__title--btn:hover {
+  filter: opacity(0.85);
+}
+#registro__title--btn button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .registro__container {
   position: relative;
   width: 80vw;
-  border: 1px solid red;
+  margin: auto;
+  /* aunque el screen sea menos largo, el form nunca tapara el btn de iniciar sesion */
+  top: calc(5vh + 20px);
 }
 .registro__container .registro__form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-radius: 15px;
+  background-color: #F53B18;
+  opacity: 0.8;
 }
 .registro__container .registro__form label {
   font-size: 15px;
@@ -276,12 +308,22 @@ body {
   width: 100%;
 }
 .registro__container .registro__form .registro__input, .registro__container .registro__form .registro__btn {
-  width: 100%;
+  width: 80%;
+  margin: 15px auto;
   padding: 10px;
-  margin-bottom: 20px;
   font-size: 20px;
+  font-weight: bolder;
+  color: black;
+  background-color: transparent;
   border: 2px solid whitesmoke;
-  border-radius: 5px;
+  border-radius: 14px;
+  opacity: 0.5;
+}
+.registro__container .registro__form #registro__btn {
+  border: none;
+  background-color: red;
+  margin-bottom: 20px;
+  opacity: 1;
 }
 
 *,

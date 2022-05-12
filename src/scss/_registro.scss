@@ -1,13 +1,45 @@
+::placeholder {
+  color: $color-black;
+  text-align: center;
+}
+::-webkit-input-placeholder{
+  color: $color-black;
+}
+::-moz-placeholder{
+  color: $color-black;
+}
+
+#registro__title--btn{
+  padding: 15px;
+  border-radius: 10px;
+
+  &:hover{
+  filter: opacity(.85);
+  }
+
+
+  button{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
 .registro__container{
   position: relative;
-  
   width: 80vw;
-  border: 1px solid red;
-
+  margin: auto;
+  /* aunque el screen sea menos largo, el form nunca tapara el btn de iniciar sesion */
+  top: calc( 5vh + 20px);
+  
   .registro__form{
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 15px;
+    background-color: $color-red;
+    opacity: .8;
 
     label{
       font-size: 15px;
@@ -17,13 +49,24 @@
 
     .registro{
       &__input, &__btn{
-        width: 100%;
+        width: 80%;
+        margin: 15px auto;
         padding: 10px;
-        margin-bottom: 20px;
         font-size: 20px;
+        font-weight: bolder;
+        color: $color-black;
+        background-color: transparent;
         border: 2px solid whitesmoke;
-        border-radius: 5px;
+        border-radius: 14px;
+        opacity: 0.5;
       }
+    }
+
+    #registro__btn{
+      border: none;
+      background-color: red;
+      margin-bottom: 20px;
+      opacity: 1;
     }
   }
 }
