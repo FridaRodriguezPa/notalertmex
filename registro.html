@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrarte</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="../dist/css/styles.css" />
   </head>
   <body>
@@ -33,27 +33,28 @@
             <img src="./img/alertmexlogo.png" alt="" />
           </article>
           <article id="registro__title--btn" class="hero__title--bg">
-            <button class="registro-btn">INICIAR SESION</button>
+            <a href="login.html">
+              <button class="registro-btn">INICIAR SESION</button>
+            </a>
           </article>
         </section>
       </header>
 
       <main class="general__container">
+
         <!-- *formulario registro -->
         <article class="registro__container">
-          <form class="registro__form" id="registro-form" action="post">
+          <form class="registro__form" id="registro-form">
             <input
               type="text"
-              required
               name="user"
               class="form__input"
-              id="user"
+              id="user-name"
               autocomplete="off"
-              placeholder="Nombre de usuario"
+              placeholder="Nombre de usuario*"
             />
             <input
               type="email"
-              required
               name="email"
               class="form__input"
               id="email"
@@ -72,21 +73,19 @@
             />
             <input
               type="password"
-              required
               name="password"
               class="form__input"
               id="password"
               autocomplete="off"
-              placeholder="Ingrese una contraseña"
+              placeholder="Ingresar contraseña*"
             />
             <input
               type="password"
-              required
               name="password2"
               class="form__input"
               id="password2"
               autocomplete="off"
-              placeholder="Confirme la contraseña"
+              placeholder="Confirmar contraseña*"
             />
             <button type="submit" id="registro__btn" class="form__btn">
               REGISTRARME
@@ -95,5 +94,7 @@
         </article>
       </main>
     </div>
+
+    <script src="/src/js/validacion.js"></script>
   </body>
 </html>
