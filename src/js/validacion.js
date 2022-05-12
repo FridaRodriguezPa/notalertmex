@@ -4,7 +4,7 @@ let $registroForm = id('registro-form')
     $userName = id('user-name');
     $email = id('email')
     $password = id('password')
-    $password2 = id('password2')
+    $password2 = id('password2');
 
     const validarCampoTexto = ( campo ) => {
       campo.value.length <= 7
@@ -15,7 +15,7 @@ let $registroForm = id('registro-form')
     const validarPassword =  ( pass1, pass2 ) => {
       pass1.value.trim() !== pass2.value.trim()
         ? alert('Las contraseñas no coinciden')
-        : null
+        : null;
     };
 
     const validarEmail = ( email ) => {
@@ -23,7 +23,7 @@ let $registroForm = id('registro-form')
       !email.value.match( emailRegex )
         ? alert('El email no es válido')
         : null;
-    }
+    };
 
 
 $registroForm.addEventListener('submit', ( e ) => {
