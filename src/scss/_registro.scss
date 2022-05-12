@@ -9,6 +9,12 @@
   color: $color-black;
 }
 
+.registro__bg{
+  position: relative;
+  height: 100vh;
+  background-image: url(../../img/map-google.png);
+}
+
 #registro__title--btn{
   padding: 15px;
   border-radius: 10px;
@@ -45,6 +51,7 @@
       font-size: 15px;
       text-align: center;
       width: 100%;
+      font-weight: bold;
     }
 
     .registro{

@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 <body>
+
+  <div class="registro__bg">
+ 
   <header>
   <!-- *navbar -->
     <section class="container">
@@ -27,7 +30,6 @@
   </section>
 
   <!-- *hero imgs header -->
-  <div class="hero">
     <section class="hero__news">
       <article class="hero__logo">
         <img src="../img/alertmexlogo.png" alt="">
@@ -36,7 +38,6 @@
         <button class="registro-btn"> INICIAR SESION  </button>
       </article>
     </section>
-  </div>
   </header>
 
   <main class="general__container">
@@ -46,6 +47,7 @@
       <form class="registro__form" id="registro-form" action="post">
         <input type="text" required name="user" class="registro__input" id="user" autocomplete="off" placeholder="Nombre de usuario">
         <input type="email" required name="email" class="registro__input" id="email" autocomplete="off" placeholder="Ingrese un email">
+        <label for="birthday"> Ingresa tu fecha de nacimiento </label>
         <input type="date" required name="birthday" class="registro__input" id="birthday" autocomplete="off" placeholder="Ingrese su fecha de nacimiento">
         <input type="password" required name="password" class="registro__input" id="password" autocomplete="off" placeholder="Ingrese una contraseña">
         <input type="password" required name="password2" class="registro__input" id="password2" autocomplete="off" placeholder="Confirme la contraseña">
@@ -53,6 +55,7 @@
       </form>
     </article>
   </main>
+  </div>
 
 </body>
 </html>
