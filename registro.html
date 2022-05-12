@@ -1,61 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrarte</title>
-  <link rel="stylesheet" href="../dist/css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarte</title>
+    <link rel="stylesheet" href="../dist/css/styles.css" />
+  </head>
+  <body>
+    <div class="form__bg">
+      <header>
+        <!-- *navbar -->
+        <section class="container">
+          <h1 class="heading">
+            <img src="./img/search.png" alt="logo" />
+            <a href="#">AlertMex</a>
+          </h1>
+          <input type="checkbox" name="bar" id="bar" />
+          <label for="bar" class="trigger"><i class="fa fa-bars"></i></label>
+          <menu class="main-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Boletines</a></li>
+            <li><a href="./noticias.html">Noticias</a></li>
+            <li><a href="./ayuda.html">Ayuda</a></li>
+            <li><a href="./quienessomos.html">¿Quienes somos?</a></li>
+          </menu>
+        </section>
 
-  <div class="registro__bg">
- 
-  <header>
-  <!-- *navbar -->
-    <section class="container">
-      <h1 class="heading">
-          <img src="./img/search.png" alt="logo">
-          <a href="#">AlertMex</a>
-      </h1>
-      <input type="checkbox" name="bar" id="bar">
-      <label for="bar" class="trigger"><i class="fa fa-bars"></i></label>
-      <menu class="main-menu">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#">Boletines</a></li>
-        <li><a href="./noticias.html">Noticias</a></li>
-        <li><a href="./ayuda.html">Ayuda</a></li>
-        <li><a href="./quienessomos.html">¿Quienes somos?</a></li>
-      </menu>
-  </section>
+        <!-- *hero imgs header -->
+        <section class="hero__news">
+          <article class="hero__logo">
+            <img src="./img/alertmexlogo.png" alt="" />
+          </article>
+          <article id="registro__title--btn" class="hero__title--bg">
+            <button class="registro-btn">INICIAR SESION</button>
+          </article>
+        </section>
+      </header>
 
-  <!-- *hero imgs header -->
-    <section class="hero__news">
-      <article class="hero__logo">
-        <img src="./img/alertmexlogo.png" alt="">
-      </article>
-      <article id="registro__title--btn" class="hero__title--bg">
-        <button class="registro-btn"> INICIAR SESION  </button>
-      </article>
-    </section>
-  </header>
-
-  <main class="general__container">
-
-    <!-- *formulario registro -->
-    <article class="registro__container">
-      <form class="registro__form" id="registro-form" action="post">
-        <input type="text" required name="user" class="registro__input" id="user" autocomplete="off" placeholder="Nombre de usuario">
-        <input type="email" required name="email" class="registro__input" id="email" autocomplete="off" placeholder="Ingrese un email">
-        <label for="birthday"> Ingresa tu fecha de nacimiento </label>
-        <input type="date" required name="birthday" class="registro__input" id="birthday" autocomplete="off" placeholder="Ingrese su fecha de nacimiento">
-        <input type="password" required name="password" class="registro__input" id="password" autocomplete="off" placeholder="Ingrese una contraseña">
-        <input type="password" required name="password2" class="registro__input" id="password2" autocomplete="off" placeholder="Confirme la contraseña">
-        <button type="submit" id="registro__btn" class="registro__btn"> REGISTRARME </button>
-      </form>
-    </article>
-  </main>
-  </div>
-
-</body>
+      <main class="general__container">
+        <!-- *formulario registro -->
+        <article class="registro__container">
+          <form class="registro__form" id="registro-form" action="post">
+            <input
+              type="text"
+              required
+              name="user"
+              class="form__input"
+              id="user"
+              autocomplete="off"
+              placeholder="Nombre de usuario"
+            />
+            <input
+              type="email"
+              required
+              name="email"
+              class="form__input"
+              id="email"
+              autocomplete="off"
+              placeholder="Ingrese un email"
+            />
+            <label for="birthday"> Ingresa tu fecha de nacimiento </label>
+            <input
+              type="date"
+              required
+              name="birthday"
+              class="form__input"
+              id="birthday"
+              autocomplete="off"
+              placeholder="Ingrese su fecha de nacimiento"
+            />
+            <input
+              type="password"
+              required
+              name="password"
+              class="form__input"
+              id="password"
+              autocomplete="off"
+              placeholder="Ingrese una contraseña"
+            />
+            <input
+              type="password"
+              required
+              name="password2"
+              class="form__input"
+              id="password2"
+              autocomplete="off"
+              placeholder="Confirme la contraseña"
+            />
+            <button type="submit" id="registro__btn" class="form__btn">
+              REGISTRARME
+            </button>
+          </form>
+        </article>
+      </main>
+    </div>
+  </body>
 </html>

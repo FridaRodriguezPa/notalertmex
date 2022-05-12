@@ -9,7 +9,7 @@
   color: $color-black;
 }
 
-.registro__bg{
+.form__bg{
   position: relative;
   height: 100vh;
   background-image: url(../../img/map-google.png);
@@ -55,7 +55,7 @@
       font-weight: bold;
     }
 
-    .registro{
+    .form{
       &__input, &__btn{
         width: 80%;
         margin: 15px auto;
