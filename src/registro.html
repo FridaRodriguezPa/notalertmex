@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarte</title>
+  <link rel="stylesheet" href="../dist/css/styles.css">
+</head>
+<body>
+  <header>
+  <!-- *navbar -->
+    <section class="container">
+      <h1 class="heading">
+          <img src="../img/search.png" alt="logo">
+          <a href="#">AlertMex</a>
+      </h1>
+      <input type="checkbox" name="bar" id="bar">
+      <label for="bar" class="trigger"><i class="fa fa-bars"></i></label>
+      <menu class="main-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Boletines</a></li>
+        <li><a href="./noticias.html">Noticias</a></li>
+        <li><a href="./ayuda.html">Ayuda</a></li>
+        <li><a href="./quienessomos.html">¿Quienes somos?</a></li>
+      </menu>
+  </section>
+
+  <!-- *hero imgs header -->
+  <div class="hero">
+    <section class="hero__news">
+      <article class="hero__logo">
+        <img src="../img/alertmexlogo.png" alt="">
+      </article>
+      <article class="hero__title--bg">
+        <button class="registro-btn"> Iniciar Sesion </button>
+      </article>
+    </section>
+  </div>
+  </header>
+
+  <main class="general__container">
+
+    <!-- *formulario registro -->
+    <article class="registro-container">
+      <form class="registro-form" id="registro-form" action="post">
+        <input type="text" name="user" id="user" autocomplete="off" placeholder="Nombre de usuario">
+        <input type="email" name="email" id="email" autocomplete="off" placeholder="Ingrese un correo electrónico">
+        <input type="date" name="birthday" id="birthday" autocomplete="off" placeholder="Ingrese su fecha de nacimiento">
+        <input type="password" name="password" id="password" autocomplete="off" placeholder="Ingrese una contraseña">
+        <input type="password" name="password2" id="password2" autocomplete="off" placeholder="Confirme la contraseña">
+        <button type="submit" class="registro-btn"> Registrarme</button>
+      </form>
+    </article>
+  </main>
+
+</body>
+</html>
