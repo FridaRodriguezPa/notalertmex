@@ -1,0 +1,29 @@
+.registro__container{
+  position: relative;
+  
+  width: 80vw;
+  border: 1px solid red;
+
+  .registro__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label{
+      font-size: 15px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .registro{
+      &__input, &__btn{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        border: 2px solid whitesmoke;
+        border-radius: 5px;
+      }
+    }
+  }
+}

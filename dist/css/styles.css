@@ -260,6 +260,30 @@ body {
   word-spacing: 100vw;
 }
 
+.registro__container {
+  position: relative;
+  width: 80vw;
+  border: 1px solid red;
+}
+.registro__container .registro__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.registro__container .registro__form label {
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+}
+.registro__container .registro__form .registro__input, .registro__container .registro__form .registro__btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+}
+
 *,
 ::after,
 ::before {
