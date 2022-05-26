@@ -425,12 +425,13 @@ body {
   opacity: 1;
 }
 
-body {
+.form__bg {
+  position: relative;
+  height: 100vh;
   background-image: url(https://i.pinimg.com/736x/ee/ae/40/eeae404be2ccf239dd6a5d81f04d649a.jpg);
   background-size: cover;
-  object-fit: cover;
 }
-body h2 {
+.form__bg h2 {
   letter-spacing: -2px;
   font-family: Open Sans;
   color: pink;
@@ -439,11 +440,8 @@ body h2 {
   line-height: 200px;
   text-shadow: 4px 4px 4px black;
   text-align: center;
-}
-
-.form__bg {
   position: relative;
-  height: 100vh;
+  right: 200px;
 }
 
 .login__container {

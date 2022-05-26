@@ -1,8 +1,11 @@
-body{
+
+
+.form__bg {
+  position: relative;
+  height: 100vh;
   background-image: url(https://i.pinimg.com/736x/ee/ae/40/eeae404be2ccf239dd6a5d81f04d649a.jpg);
   background-size: cover;
-  object-fit: cover;
-  h2 {
+  h2{
     letter-spacing: -2px;
     font-family: Open Sans;
     color: pink;
@@ -11,11 +14,10 @@ body{
     line-height: 200px;
     text-shadow: 4px 4px 4px $color-black;
     text-align: center;
+    position:relative;
+    right: 200px;
   }
-}
-.form__bg {
-  position: relative;
-  height: 100vh;
+
 }
 
 .login__container {
