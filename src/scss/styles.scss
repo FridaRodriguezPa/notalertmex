@@ -221,7 +221,7 @@ use:hover {
   }
 }
 
-.card {  
+.tarjeta {  
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -328,7 +328,7 @@ use:hover {
 }
 
 @media (hover: hover) and (min-width: $bp-md) {
-  .card:after {
+  .tarjeta:after {
     transform: translateY(0);
   }
   
@@ -344,8 +344,8 @@ use:hover {
     }
   }
   
-  .card:hover,
-  .card:focus-within {
+  .tarjeta:hover,
+  .tarjeta:focus-within {
     align-items: center;
 
     &:before { transform: translateY(-4%); }
@@ -362,7 +362,7 @@ use:hover {
     }
   }
   
-  .card:focus-within {
+  .tarjeta:focus-within {
     &:before,
     &:after,
     .content,

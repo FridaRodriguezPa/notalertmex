@@ -3,6 +3,8 @@
 /* 
 *noticias
 */
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 .hero {
@@ -260,7 +262,6 @@ body {
 html {
   height: 100%;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
 }
 
 body {
@@ -349,6 +350,147 @@ body {
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   line-height: 1.4;
   word-spacing: 100vw;
+}
+
+.sub-ayuda {
+  font-size: 50px;
+  text-align: center;
+  background-color: hotpink;
+}
+
+.lista-ayuda {
+  --color-bg: #f0f0f0;
+  --color-text: #303030;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.ol-cards,
+.ol-cards *,
+.ol-cards *::before,
+.ol-cards *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ol-cards {
+  --ol-cards-color-bg: var(--color-bg);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 45em;
+  padding: 1em;
+  gap: 2em;
+  counter-reset: ol-cards-counter;
+}
+
+.ol-cards li {
+  display: grid;
+  grid-template-areas: "step title" "step content";
+  padding: 10px;
+  column-gap: 2em;
+  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4), inset 0.05em 0.05em white;
+  counter-increment: ol-cards-counter;
+  text-align: left;
+  background-color: var(--ol-cards-color-bg);
+}
+
+.ol-cards.alternate li:nth-child(even) {
+  grid-template-areas: "title step" "content step";
+  padding: 1em 0 1em 2em;
+}
+
+.ol-cards li .step {
+  grid-area: step;
+  display: flex;
+  align-self: flex-start;
+  background-color: var(--ol-cards-color-accent);
+  border-radius: 0 50em 50em 0;
+  padding: 1em;
+  justify-content: flex-end;
+  box-shadow: inset 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.4), 0em 0.05em white;
+  flex: 1;
+  gap: 1em;
+}
+
+.ol-cards li .step::before {
+  content: "0" counter(ol-cards-counter);
+  flex: 1;
+  align-self: center;
+  color: var(--ol-cards-color-bg);
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 0.025em 0.025em 0.125em rgba(0, 0, 0, 0.4);
+}
+
+.ol-cards.alternate li:nth-child(even) .step {
+  border-radius: 50em 0 0 50em;
+  flex-direction: row-reverse;
+}
+
+.ol-cards li .step i {
+  color: var(--ol-cards-color-accent);
+  width: 2em;
+  height: 2em;
+  font-size: 1.8em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: var(--ol-cards-color-bg);
+  box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.4), inset 0.05em 0.05em white;
+}
+
+.ol-cards li .title {
+  grid-area: title;
+  color: var(--ol-cards-color-accent);
+  font-weight: bold;
+}
+
+.ol-cards li .content {
+  grid-area: content;
+  font-size: 0.9em;
+  padding: 0.5;
+}
+
+@media only screen and (max-width: 500px) {
+  .ol-cards {
+    padding: 1em;
+  }
+
+  .ol-cards li {
+    column-gap: 0em;
+    grid-template-areas: "step title" "content content";
+    grid-template-columns: min-content auto;
+    padding: 1em 0em;
+  }
+
+  .ol-cards.alternate li:nth-child(even) {
+    column-gap: 0em;
+    grid-template-areas: "title step" "content content";
+    grid-template-columns: auto min-content;
+    padding: 1em 0em;
+  }
+
+  .ol-cards li .title {
+    padding: 0 1em;
+    align-self: center;
+    width: auto;
+  }
+
+  .ol-cards li .step {
+    font-size: 0.5em;
+  }
+
+  .ol-cards li .content {
+    padding: 0 1em;
+  }
+}
+a {
+  text-decoration: none;
 }
 
 ::placeholder {
@@ -693,7 +835,7 @@ use:hover {
   }
 }
 
-.card {
+.tarjeta {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -706,11 +848,11 @@ use:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 600px) {
-  .card {
+  .tarjeta {
     height: 350px;
   }
 }
-.card:before {
+.tarjeta:before {
   content: "";
   position: absolute;
   top: 0;
@@ -722,7 +864,7 @@ use:hover {
   transition: transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
 }
-.card:after {
+.tarjeta:after {
   content: "";
   display: block;
   position: absolute;
@@ -735,10 +877,10 @@ use:hover {
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
 }
-.card:nth-child(1):before {
+.tarjeta:nth-child(1):before {
   background-image: url(https://i.pinimg.com/564x/c3/a6/b1/c3a6b19acce05c841c6993f5175d2465.jpg);
 }
-.card:nth-child(2):before {
+.tarjeta:nth-child(2):before {
   background-image: url(https://i.pinimg.com/564x/c3/a6/b1/c3a6b19acce05c841c6993f5175d2465.jpg);
 }
 
@@ -774,7 +916,7 @@ use:hover {
 }
 
 @media (hover: hover) and (min-width: 600px) {
-  .card:after {
+  .tarjeta:after {
     transform: translateY(0);
   }
 
@@ -787,32 +929,32 @@ use:hover {
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
   }
 
-  .card:hover,
-.card:focus-within {
+  .tarjeta:hover,
+.tarjeta:focus-within {
     align-items: center;
   }
-  .card:hover:before,
-.card:focus-within:before {
+  .tarjeta:hover:before,
+.tarjeta:focus-within:before {
     transform: translateY(-4%);
   }
-  .card:hover:after,
-.card:focus-within:after {
+  .tarjeta:hover:after,
+.tarjeta:focus-within:after {
     transform: translateY(-50%);
   }
-  .card:hover .content,
-.card:focus-within .content {
+  .tarjeta:hover .content,
+.tarjeta:focus-within .content {
     transform: translateY(0);
   }
-  .card:hover .content > *:not(.title),
-.card:focus-within .content > *:not(.title) {
+  .tarjeta:hover .content > *:not(.title),
+.tarjeta:focus-within .content > *:not(.title) {
     opacity: 1;
     transform: translateY(0);
     transition-delay: calc(var(--d) / 8);
   }
 
-  .card:focus-within:before, .card:focus-within:after,
-.card:focus-within .content,
-.card:focus-within .content > *:not(.title) {
+  .tarjeta:focus-within:before, .tarjeta:focus-within:after,
+.tarjeta:focus-within .content,
+.tarjeta:focus-within .content > *:not(.title) {
     transition-duration: 0s;
   }
 }
