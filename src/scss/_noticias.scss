@@ -51,15 +51,9 @@
     
   }
 }
-
-
-
 body {
   background: #f1f1f1;
 }
-
-
-
 .blog-card {
   display: flex;
   flex-direction: column;
@@ -72,6 +66,8 @@ body {
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
+ 
+
   a {
     color: inherit;
     &:hover {
