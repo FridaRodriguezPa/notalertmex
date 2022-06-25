@@ -29,11 +29,11 @@
     }
   }
 
-  .hero__title--bg {
+  .hero__title {
     position: relative;
-    width: 20rem;
+    display: block;
+    margin-bottom: 150px;
     padding: 20px;
-    left: calc(50% - 10rem);
     top: calc(20vh - 100px);
     font-weight: bolder;
     text-align: center;
